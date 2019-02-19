@@ -1,8 +1,16 @@
-public class Rollercoaster extends Attraction implements ISecurity{
+public class Rollercoaster extends Attraction implements ITicketed, ISecurity{
 
-    public Rollercoaster(String name) {
+    double price;
 
-        super(name);
+    public Rollercoaster(String name, int rating, double price) {
+
+        super(name, rating);
+        this.price = price;
+    }
+
+    @Override
+    public double defaultPrice() {
+        return price;
     }
 
     @Override
@@ -13,9 +21,6 @@ public class Rollercoaster extends Attraction implements ISecurity{
         return false;
     }
 
-    @Override
-    public double defaultPrice() {
-        return this.defaultPrice;
-    }
+
 
 }

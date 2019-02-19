@@ -4,8 +4,9 @@ public abstract class Attraction implements IReviewed{
     private int rating;
 
 
-    public Attraction(String name){
+    public Attraction(String name, int rating){
         this.name = name;
+        this.rating = rating;
 
     }
 
